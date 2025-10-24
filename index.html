@@ -227,56 +227,68 @@
             z-index: 1;
         }
 
-        /* Accomplishments */
-        .accomplishments-list {
-            margin-top: 2rem;
+        /* Work Portfolio */
+        .work-category {
+            margin-bottom: 4rem;
         }
 
-        .accomplishment-item {
+        .category-title {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ec4899;
+        }
+
+        .category-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .work-items {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .work-item {
             background: white;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
+            padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(59, 130, 246, 0.1);
             border-left: 4px solid #8b5cf6;
-            position: relative;
-            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .accomplishment-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
+        .work-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
         }
 
-        .accomplishment-item h4 {
+        .work-item h5 {
             color: #1e3a8a;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
         }
 
-        .accomplishment-item .year {
-            color: #ec4899;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-            display: block;
-            position: relative;
-            z-index: 1;
-        }
-
-        .accomplishment-item p {
+        .work-description {
             color: #666;
             line-height: 1.6;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .view-link {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .view-link:hover {
+            color: #ec4899;
         }
 
         /* Contact Section */
@@ -406,7 +418,7 @@
         <h3>About Me</h3>
         <div class="about-content">
             <div class="profile-placeholder">
-                <img src="profile.jpg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <img src="https://i.imgur.com/JNUijMb.jpeg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
             </div>
             <div class="bio">
                 <p>I am a climate resilience specialist with local government experience and expertise in municipal sustainability projects, stakeholder engagement, and climate action. My work spans from urban climate initiatives to sustainable agriculture systems.</p>
@@ -435,36 +447,42 @@
         </div>
     </section>
 
-    <!-- Accomplishments -->
+    <!-- Work Portfolio -->
     <section id="accomplishments">
-        <h3>Key Accomplishments</h3>
-        <div class="accomplishments-list">
-            <div class="accomplishment-item">
-                <h4>Community Climate Resilience Initiative</h4>
-                <span class="year">2023-2024</span>
-                <p>Led a multi-year participatory research project partnering with five frontline communities to develop locally-tailored climate adaptation plans, resulting in $2M in resilience funding and implementation of community-prioritized interventions.</p>
-            </div>
-            <div class="accomplishment-item">
-                <h4>Environmental Justice Policy Framework</h4>
-                <span class="year">2022</span>
-                <p>Co-authored comprehensive policy recommendations adopted by state environmental agencies, establishing equity screening tools and community engagement requirements for environmental permitting decisions.</p>
-            </div>
-            <div class="accomplishment-item">
-                <h4>Published Research & Scholarship</h4>
-                <span class="year">2020-Present</span>
-                <p>Authored 15+ peer-reviewed publications in leading environmental and public health journals examining climate justice, environmental health disparities, and community-based adaptation strategies.</p>
-            </div>
-            <div class="accomplishment-item">
-                <h4>National Environmental Justice Award</h4>
-                <span class="year">2023</span>
-                <p>Recognized for outstanding contributions to advancing environmental justice through research, advocacy, and community partnership that meaningfully improved environmental conditions in underserved communities.</p>
-            </div>
-            <div class="accomplishment-item">
-                <h4>Grant Funding Success</h4>
-                <span class="year">2021-2024</span>
-                <p>Secured over $5M in competitive research funding from federal agencies and foundations to support environmental justice research, climate adaptation planning, and community capacity building initiatives.</p>
+        <h3>Work Portfolio</h3>
+        
+        <!-- Coastal Management Section -->
+        <div class="work-category">
+            <h4 class="category-title">Coastal Management and Climate Adaptation</h4>
+            <p class="category-description">[Add your description of this work area here]</p>
+            
+            <div class="work-items">
+                <div class="work-item">
+                    <h5>Resourcing Michigan's coastal decision-makers: Assessing needs & opportunities</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1Z1SSBwBH-oZd5_zG1a4O2uGjDNG3LZJQ/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Great Lakes Coastal Resilience Research [SLIDES]</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1jv52ITw7lIkmZ3BtdfMGtGJJz-pAEWv6/view?usp=sharing" target="_blank" class="view-link">View Slides →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Charleston, WV Climate Adaptation Plan</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1t0zQoYKcZw5djXWd6CqFY8IxdJtv3mn1/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Recommendations for Delaware River Watershed Collaboration Efforts</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/15E5fvQpGKfPFl72fTMTo05ZdMBOv8GBz/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- Contact Section -->
