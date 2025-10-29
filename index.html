@@ -1,5 +1,487 @@
-</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Justice Researcher | Climate Resilience Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 30px); }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            border-bottom: 3px solid #ec4899;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .profile-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #1e3a8a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .bio p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Research Areas */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #faf5ff 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #3b82f6;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        }
+
+        .research-card:hover::before {
+            transform: translate(-20px, -20px) scale(1.5);
+        }
+
+        .research-card h4 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .research-card p {
+            color: #666;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Work Portfolio */
+        .work-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ec4899;
+        }
+
+        .category-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .work-items {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .work-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #8b5cf6;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .work-item h5 {
+            color: #1e3a8a;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .view-link {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .view-link:hover {
+            color: #ec4899;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #eff6ff 0%, #fdf4ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        #contact::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            right: -5%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .contact-content {
+            text-align: center;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h1>Abigail Merolle (She | Her)</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Environmental Justice Researcher</h2>
+        <p>Climate Resilience Specialist | Advocate for Equitable Solutions | Building Sustainable Communities</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h3>About Me</h3>
+        <div class="about-content">
+            <div class="profile-placeholder">
+                <img src="https://i.imgur.com/JNUijMb.jpeg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            </div>
+            <div class="bio">
+                <p>I am a climate resilience specialist with local government experience and expertise in municipal sustainability projects, stakeholder engagement, and climate action. My work spans from urban climate initiatives to sustainable agriculture systems.</p>
+                <p>I am particularly interested in equitable approaches to climate resilience in coastal and agricultural communities. I believe that relationship building and co-learning are essential for supporting communities as they implement sustainable practices and adapt to climate change impacts.</p>
+                <p>Through collaborative partnerships and community-centered approaches, I work to develop resilience strategies that are both scientifically grounded and locally responsive, ensuring that climate solutions serve the diverse needs of the communities most affected by environmental change.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research">
+        <h3>Research Areas</h3>
+        <div class="research-grid">
+            <div class="research-card">
+                <h4>🌍 Environmental Justice</h4>
+                <p>My journey into environmental justice began with undergraduate studies in biological conservation and agroecology. Through NSF-funded research on climate adaptation in Ugandan bean farms and work testing water quality for agricultural nutrients, I became increasingly interested in the impacts of industrial agriculture on surrounding communities and the trade-offs farmers face. This led me to the University of Michigan's School for Environment and Sustainability, where I focused on water governance, equitable climate adaptation, energy justice, and Indigenous rights.</p>
+            </div>
+            <div class="research-card">
+                <h4>🌊 Climate Resilience</h4>
+                <p>Through my graduate research and positions with the Cooperative Institute for Great Lakes Research (CIGLR) and the Great Lakes Integrated Sciences and Assessments (GLISA), I have focused on flood mitigation strategies in the Midwest. My work emphasizes strengthening community capacity to withstand and recover from climate-related disasters through nature-based solutions and community-led resilience planning approaches.</p>
+            </div>
+            <div class="research-card">
+                <h4>📊 Policy Analysis</h4>
+                <p>I evaluate environmental policies through an equity lens, analyzing their impacts on diverse communities and recommending evidence-based improvements to advance both environmental and social justice goals. My focus areas include Indigenous rights and sovereignty, Great Lakes water quality (particularly the Line 5 pipeline controversy), drinking water access, and energy justice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Portfolio -->
+    <section id="accomplishments">
+        <h3>Work Portfolio</h3>
+        
+        <!-- Coastal Management Section -->
+        <div class="work-category">
+            <h4 class="category-title">Coastal Management and Climate Adaptation</h4>
+            <p class="category-description">[Add your description of this work area here]</p>
+            
+            <div class="work-items">
+                <div class="work-item">
+                    <h5>Resourcing Michigan's coastal decision-makers: Assessing needs & opportunities</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1Z1SSBwBH-oZd5_zG1a4O2uGjDNG3LZJQ/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Great Lakes Coastal Resilience Research [SLIDES]</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1jv52ITw7lIkmZ3BtdfMGtGJJz-pAEWv6/view?usp=sharing" target="_blank" class="view-link">View Slides →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Charleston, WV Climate Adaptation Plan</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/1t0zQoYKcZw5djXWd6CqFY8IxdJtv3mn1/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
+                
+                <div class="work-item">
+                    <h5>Recommendations for Delaware River Watershed Collaboration Efforts</h5>
+                    <p class="work-description">[Add description of this project here]</p>
+                    <a href="https://drive.google.com/file/d/15E5fvQpGKfPFl72fTMTo05ZdMBOv8GBz/view?usp=sharing" target="_blank" class="view-link">View Document →</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Water Rights Section -->
         <div class="work-category">
@@ -97,6 +579,60 @@
             </div>
         </div>
 
-</section>
+    </section>
 
-<!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Get In Touch</h3>
+        <div class="contact-content">
+            <p>Interested in collaboration, speaking engagements, or learning more about my work?</p>
+            <div class="contact-links">
+                <a href="mailto:amerolle@umich.edu" class="contact-button">Email Me</a>
+                <a href="https://www.linkedin.com/in/abigail-merolle/" target="_blank" class="contact-button">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Abigail Merolle. All rights reserved. | Environmental Justice Researcher & Climate Resilience Specialist</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
